@@ -1,0 +1,11 @@
+.UserOutput{
+    border : 5px solid blue;
+    padding: 5px;
+    margin: 5px;
+    background-color: #657896;
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+        
+    
+}

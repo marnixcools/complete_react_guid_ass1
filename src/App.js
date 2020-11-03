@@ -8,9 +8,10 @@ class  App extends Component {
     name : "Marnix"
   }
 
-  setNameHandler = () => {
+  setNameHandler = (prename, lastname) => {
     this.setState({
-      name : "Marnix cools"
+      //name : prename + " " + lastname
+      name : `${prename}  ${lastname}`
     })
   }
   changeNameHandler = (event) => {
@@ -26,9 +27,12 @@ render(){
           nameChange={this.changeNameHandler}
           locName={this.state.name}>           
         </UserInput>
-        <button onClick={this.setNameHandler} >Change name</button>
-        <UserOutput name={this.state.name}/>
-        <UserOutput name="Nathan"/>
+        <button onClick={this.setNameHandler.bind(this, "Bart" , "Simson")} >Change name</button>
+        <div >        
+          <UserOutput  name={this.state.name}/>
+          <UserOutput name="Nathan"/>
+        </div>
+
       </div>
     )
   }

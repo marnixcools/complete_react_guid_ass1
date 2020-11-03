@@ -2,10 +2,11 @@ import React from 'react';
 import './UserInput.css'
 const style ={
     backgroundColor : 'red',
-    textAlign : 'center'
+    textAlign : 'center',
+    padding: '5px'
 }
 const userInput = (props) => {
-    return <div className="userInput">
+    return <div className="UserInput">
         <input 
             style={style}                       
             onChange= {props.nameChange}
